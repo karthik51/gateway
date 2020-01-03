@@ -59,7 +59,7 @@
         }
       ],
       "UpstreamPathTemplate": "/api/trips/GetAllTrips",
-      "UpstreamHttpMethod": [ "Get" ]     
+      "UpstreamHttpMethod": [ "Get" ]
     },
     {
       "UseServiceDiscovery": true,
@@ -103,7 +103,7 @@
 
   ],
   "GlobalConfiguration": {
-    "BaseUrl": "http://trips2.azurewebsites.net:80",
+    "BaseUrl": "http://gateways2.azurewebsites.net",
     "ServiceDiscoveryProvider": {
       "Host": "localhost",
       "Port": 8500,

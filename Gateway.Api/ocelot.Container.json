@@ -6,8 +6,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "auth",
-          "Port": 5001
+          "Host": "https://auths2.azurewebsites.net",
+          "Port": 80
         }
       ],
       "UpstreamPathTemplate": "/api/users/login",
@@ -19,8 +19,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "auth",
-          "Port": 5001
+          "Host": "https://auths2.azurewebsites.net",
+          "Port": 80
         }
       ],
       "UpstreamPathTemplate": "/api/users/getusers",
@@ -32,8 +32,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "auth",
-          "Port": 5001
+          "Host": "https://auths2.azurewebsites.net",
+          "Port": 80
         }
       ],
       "UpstreamPathTemplate": "/api/users/createuser",
@@ -54,28 +54,12 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "trip",
-          "Port": 5002
+          "Host": "http://trips2.azurewebsites.net",
+          "Port": 80
         }
       ],
       "UpstreamPathTemplate": "/api/trips/GetAllTrips",
-      "UpstreamHttpMethod": [ "Get" ]//,
-      //"ServiceName": "trip",
-      //"LoadBalancerOptions": {
-      //  "Type": "RoundRobin"
-      //},
-      //"RateLimitOptions": {
-      //  "ClientWhitelist": [],
-      //  "EnableRateLimiting": true,
-      //  "Period": "1s",
-      //  "PeriodTimespan": 1,
-      //  "Limit": 1
-      //},
-      //"QoSOptions": {
-      //  "ExceptionsAllowedBeforeBreaking": 3,
-      //  "DurationOfBreak": 1000,
-      //  "TimeoutValue": 5000
-      //}
+      "UpstreamHttpMethod": [ "Get" ]
     },
     {
       "UseServiceDiscovery": true,
@@ -83,8 +67,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "trip",
-          "Port": 5002
+          "Host": "http://trips2.azurewebsites.net",
+          "Port": 80
         }
       ],
       "UpstreamPathTemplate": "/api/trips/GetTripsForEmployee",
@@ -96,8 +80,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "trip",
-          "Port": 5002
+          "Host": "http://trips2.azurewebsites.net",
+          "Port": 80
         }
       ],
       "UpstreamPathTemplate": "/api/trips/GetTripsByCustomer",
@@ -109,8 +93,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "trip",
-          "Port": 5002
+          "Host": "http://trips2.azurewebsites.net",
+          "Port": 80
         }
       ],
       "UpstreamPathTemplate": "/api/trips/CreateRide",
@@ -119,9 +103,9 @@
 
   ],
   "GlobalConfiguration": {
-    "BaseUrl": "http://gateway:5000",
+    "BaseUrl": "http://gateways2.azurewebsites.net",
     "ServiceDiscoveryProvider": {
-      "Host": "consul",
+      "Host": "localhost",
       "Port": 8500,
       "Type": "Consul"
     }
