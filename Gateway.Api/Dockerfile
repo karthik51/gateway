@@ -6,7 +6,7 @@ FROM mcr.microsoft.com/dotnet/core/sdk:2.2-stretch AS build
 WORKDIR /src
 COPY ["Gateway.Api/Gateway.Api.csproj", "Gateway.Api/"]
 RUN dotnet restore "Gateway.Api/Gateway.Api.csproj"
-COPY . .
+COPY /app /app
 WORKDIR "/src/Gateway.Api"
 RUN dotnet build "Gateway.Api.csproj" -c Release -o /app
 
