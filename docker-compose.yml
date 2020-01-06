@@ -5,7 +5,7 @@ services:
     image: karthikeyan51/tms-gatewayapi
     build:
       context: .
-      dockerfile: Gateway.Api/Dockerfile
+      dockerfile: ./Gateway.Api/Dockerfile
     environment:
       - ASPNETCORE_ENVIRONMENT=Container
       - ASPNETCORE_URLS=http://+:5000
