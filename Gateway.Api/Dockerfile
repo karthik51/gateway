@@ -1,17 +1,17 @@
-FROM mcr.microsoft.com/dotnet/core/aspnet:2.2-stretch-slim AS base
+FROM microsoft/dotnet:2.2-aspnetcore-runtime AS base
 WORKDIR /app
 EXPOSE 80
 
-FROM mcr.microsoft.com/dotnet/core/sdk:2.2-stretch AS build
+FROM microsoft/dotnet:2.2-sdk AS build
 WORKDIR /src
-COPY ["Gateway.Api/Gateway.Api.csproj", "Gateway.Api/"]
-RUN dotnet restore "Gateway.Api/Gateway.Api.csproj"
-COPY /app /app
-WORKDIR "/src/Gateway.Api"
-RUN dotnet build "Gateway.Api.csproj" -c Release -o /app
+COPY Gateway.Api/Gateway.Api.csproj Gateway.Api/
+RUN dotnet restore Gateway.Api/Gateway.Api.csproj
+COPY . .
+WORKDIR /src/Gateway.Api
+RUN dotnet build Gateway.Api.csproj -c Release -o /app
 
 FROM build AS publish
-RUN dotnet publish "Gateway.Api.csproj" -c Release -o /app
+RUN dotnet publish Gateway.Api.csproj -c Release -o /app
 
 FROM base AS final
 WORKDIR /app
