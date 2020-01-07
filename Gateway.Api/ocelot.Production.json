@@ -6,7 +6,7 @@
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "https://auths2.azurewebsites.net",
+          "Host": "auths2.azurewebsites.net",
           "Port": 80
         }
       ],
@@ -19,7 +19,7 @@
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "https://auths2.azurewebsites.net",
+          "Host": "auths2.azurewebsites.net",
           "Port": 80
         }
       ],
@@ -32,7 +32,7 @@
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "https://auths2.azurewebsites.net",
+          "Host": "auths2.azurewebsites.net",
           "Port": 80
         }
       ],
@@ -54,7 +54,7 @@
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "http://trips2.azurewebsites.net",
+          "Host": "trips2.azurewebsites.net",
           "Port": 80
         }
       ],
@@ -67,7 +67,7 @@
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "http://trips2.azurewebsites.net",
+          "Host": "trips2.azurewebsites.net",
           "Port": 80
         }
       ],
@@ -80,7 +80,7 @@
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "http://trips2.azurewebsites.net",
+          "Host": "trips2.azurewebsites.net",
           "Port": 80
         }
       ],
@@ -93,7 +93,7 @@
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "http://trips2.azurewebsites.net",
+          "Host": "trips2.azurewebsites.net",
           "Port": 80
         }
       ],
