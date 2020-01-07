@@ -1,11 +1,112 @@
 {
-  "Logging": {
-    "IncludeScopes": true,
-    "LogLevel": {
-      "Default": "Debug",
-      "System": "Information",
-      "Microsoft": "Information"
+  "ReRoutes": [
+    {
+      "UseServiceDiscovery": true,
+      "DownstreamPathTemplate": "/api/v1/users/login",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "https://auths2.azurewebsites.net",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/api/users/login",
+      "UpstreamHttpMethod": [ "Post" ]
+    },
+    {
+      "UseServiceDiscovery": true,
+      "DownstreamPathTemplate": "/api/v1/users/getusers",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "https://auths2.azurewebsites.net",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/api/users/getusers",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "UseServiceDiscovery": true,
+      "DownstreamPathTemplate": "/api/v1/users/createuser",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "https://auths2.azurewebsites.net",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/api/users/createuser",
+      "UpstreamHttpMethod": [ "Post" ]
+      //"ServiceName": "auth",
+      //"LoadBalancerOptions": {
+      //  "Type": "LeastConnection"
+      //},
+      //"QoSOptions": {
+      //  "ExceptionsAllowedBeforeBreaking": 3,
+      //  "DurationOfBreak": 1000,
+      //  "TimeoutValue": 5000
+      //}
+    },
+    {
+      "UseServiceDiscovery": true,
+      "DownstreamPathTemplate": "/api/v1/trips/GetAllTrips",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "http://trips2.azurewebsites.net",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/api/trips/GetAllTrips",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "UseServiceDiscovery": true,
+      "DownstreamPathTemplate": "/api/v1/trips/GetTripsForEmployee",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "http://trips2.azurewebsites.net",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/api/trips/GetTripsForEmployee",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "UseServiceDiscovery": true,
+      "DownstreamPathTemplate": "/api/v1/trips/GetTripsByCustomer",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "http://trips2.azurewebsites.net",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/api/trips/GetTripsByCustomer",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "UseServiceDiscovery": true,
+      "DownstreamPathTemplate": "/api/v1/trips/CreateRide",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "http://trips2.azurewebsites.net",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/api/trips/CreateRide",
+      "UpstreamHttpMethod": [ "Post" ]
     }
-  },
-  "AllowedHosts": "*"
+
+  ],
+  "GlobalConfiguration": {
+    "ServiceDiscoveryProvider": {
+      "Host": "localhost",
+      "Port": 8500,
+      "Type": "Consul"
+    }
+  }
 }
