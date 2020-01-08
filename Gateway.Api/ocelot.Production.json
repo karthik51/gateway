@@ -3,7 +3,7 @@
     {
       "UseServiceDiscovery": true,
       "DownstreamPathTemplate": "/api/v1/users/login",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
           "Host": "auths2.azurewebsites.net",
@@ -16,7 +16,7 @@
     {
       "UseServiceDiscovery": true,
       "DownstreamPathTemplate": "/api/v1/users/getusers",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
           "Host": "auths2.azurewebsites.net",
@@ -29,7 +29,7 @@
     {
       "UseServiceDiscovery": true,
       "DownstreamPathTemplate": "/api/v1/users/createuser",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
           "Host": "auths2.azurewebsites.net",
@@ -51,7 +51,7 @@
     {
       "UseServiceDiscovery": true,
       "DownstreamPathTemplate": "/api/v1/trips/GetAllTrips",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
           "Host": "trips2.azurewebsites.net",
@@ -64,7 +64,7 @@
     {
       "UseServiceDiscovery": true,
       "DownstreamPathTemplate": "/api/v1/trips/GetTripsForEmployee",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
           "Host": "trips2.azurewebsites.net",
@@ -77,7 +77,7 @@
     {
       "UseServiceDiscovery": true,
       "DownstreamPathTemplate": "/api/v1/trips/GetTripsByCustomer",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
           "Host": "trips2.azurewebsites.net",
@@ -90,7 +90,7 @@
     {
       "UseServiceDiscovery": true,
       "DownstreamPathTemplate": "/api/v1/trips/CreateRide",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
           "Host": "trips2.azurewebsites.net",
@@ -103,10 +103,6 @@
 
   ],
   "GlobalConfiguration": {
-    "ServiceDiscoveryProvider": {
-      "Host": "localhost",
-      "Port": 8500,
-      "Type": "Consul"
-    }
+    //"BaseUrl": "https://gateways2.azurewebsites.net"
   }
 }
