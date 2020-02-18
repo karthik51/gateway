@@ -95,7 +95,7 @@
     //},
     {
       "UseServiceDiscovery": true,
-      "DownstreamPathTemplate": "/api/v1/trips/GetAllTrips",
+      "DownstreamPathTemplate": "/api/v1/events/GetAllEvents",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -103,12 +103,12 @@
           "Port": 5002
         }
       ],
-      "UpstreamPathTemplate": "/api/trips/GetAllTrips",
+      "UpstreamPathTemplate": "/api/events/GetAllEvents",
       "UpstreamHttpMethod": [ "Get" ]
     },
     {
       "UseServiceDiscovery": true,
-      "DownstreamPathTemplate": "/api/v1/trips/GetTripsForEmployee",
+      "DownstreamPathTemplate": "/api/v1/events/GetEventsByVolunteer",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -116,12 +116,12 @@
           "Port": 5002
         }
       ],
-      "UpstreamPathTemplate": "/api/trips/GetTripsForEmployee",
+      "UpstreamPathTemplate": "/api/events/GetEventsByVolunteer",
       "UpstreamHttpMethod": [ "Get" ]
     },
     {
       "UseServiceDiscovery": true,
-      "DownstreamPathTemplate": "/api/v1/trips/GetTripsByCustomer",
+      "DownstreamPathTemplate": "/api/v1/events/CreateEvent",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -129,21 +129,21 @@
           "Port": 5002
         }
       ],
-      "UpstreamPathTemplate": "/api/trips/GetTripsByCustomer",
-      "UpstreamHttpMethod": [ "Get" ]
-    },
-    {
-      "UseServiceDiscovery": true,
-      "DownstreamPathTemplate": "/api/v1/trips/CreateRide",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 5002
-        }
-      ],
-      "UpstreamPathTemplate": "/api/trips/CreateRide",
+      "UpstreamPathTemplate": "/api/events/CreateEvent",
       "UpstreamHttpMethod": [ "Post" ]
+    },
+    {
+      "UseServiceDiscovery": true,
+      "DownstreamPathTemplate": "/api/v1/events/UpdateEvent",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ],
+      "UpstreamPathTemplate": "/api/events/UpdateEvent",
+      "UpstreamHttpMethod": [ "Put" ]
     }
 
   ],
